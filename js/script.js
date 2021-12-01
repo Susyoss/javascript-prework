@@ -100,8 +100,25 @@ const displayResult = function (argComputerMove, argPlayerMove){
     else if( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce' ){
     printMessage('REMIS');
     }
-            
+    
+    var argButtonName, buttonTest;
+
+/**
+ * Describe this function...
+ */
+function buttonClicked(argButtonName) {
+  clearMessages();
+  console.log(argButtonName + ' został kliknięty');
 }
+buttonTest = document.getElementById('button-test');
+buttonTest.addEventListener('click', function(){ buttonClicked('Guzik TEST'); });
+}
+buttonTest = document.getElementById('button-rock');
+buttonTest.addEventListener('click', function(){ buttonClicked('Guzik Kamień'); });
+buttonTest = document.getElementById('button-paper');
+buttonTest.addEventListener('click', function(){ buttonClicked('Guzik Paper'); });
+buttonTest = document.getElementById('button-scissors');
+buttonTest.addEventListener('click', function(){ buttonClicked('Guzik Nożyce'); });
 
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
