@@ -94,10 +94,10 @@ function displayResult(argPlayerMove, argComputerMove) { //przymuje ruch gracza 
 /**
  * Describe this function...
  */
-function buttonClicked(ButtonName) {
+function buttonClicked(buttonName) {
   clearMessages();
-  console.log(ButtonName + ' został kliknięty');
-  const playerMove = ButtonName;
+  console.log(buttonName + ' został kliknięty');
+  const playerMove = buttonName;
   console.log('ruch gracza to: ' + playerMove);
   const randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log('wylosowana liczba to: ' + randomNumber);
@@ -105,10 +105,6 @@ function buttonClicked(ButtonName) {
   console.log('ruch komputera to: ' + computerMove);
   displayResult(playerMove, computerMove);
 }
-const buttonTest = document.getElementById('button-test');
-buttonTest.addEventListener('click', function(){ 
-  buttonClicked('test'); 
-});
 
 const buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){ 
